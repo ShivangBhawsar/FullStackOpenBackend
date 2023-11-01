@@ -9,3 +9,6 @@ Content-Type: application/json
     "name": "Shivang",
     "number": "+352691214432"
 }
+
+###
+DELETE https://phonebook-lr4g.onrender.com/api/persons/2
