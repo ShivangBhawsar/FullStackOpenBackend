@@ -4,7 +4,19 @@ GET http://localhost:3002/api/persons/
 GET http://localhost:3002/info
 
 ###
+GET http://localhost:3002/api/persons/6543a5bcaa98febcf2511317
+
+###
 DELETE http://localhost:3002/api/persons/2
+
+###
+PUT http://localhost:3002/api/persons/6543a5bcaa98febcf2511317
+Content-Type: application/json
+
+{
+    "name": "Anna Deny",
+    "number": "+352691214432"
+}
 
 ###
 
@@ -12,7 +24,7 @@ POST http://localhost:3002/api/persons/
 Content-Type: application/json
 
 {
-    "name": "Shivang2",
+    "name": "Ssasd",
     "number": "+352691214432"
 }
 

@@ -18,8 +18,24 @@ mongoose.connect(url)
     })
 
 const phonebookSchema = new mongoose.Schema({
-    name: String,
-    number: String,
+    name: {
+        type: String,
+        minLength: 3,
+        required: true
+    },
+    number: {
+        type: String,
+        required: true,
+        validate: {
+            validator: function (value) {
+                // Regular expression to match the phone number format
+                const phoneRegex = /^\d+-\d+$/;
+
+                return phoneRegex.test(value);
+            },
+            message: 'Invalid phone number format. Please use the format: XXX-XXXXXXXX'
+        }
+    }
 })
 
 
